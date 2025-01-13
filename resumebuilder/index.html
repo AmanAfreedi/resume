@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+        <p>Create your professional resume in minutes!</p>
+    </header>
+    <main>
+        <form id="resume-form">
+            <div class="PI">
+                <h2>Personal Information</h2>
+                <label for="name">
+                    <p>Name:</p>
+                </label>
+                <input placeholder="Name" type="text" id="name" name="name" required>
+
+                <label for="email">
+                    <p>Email:</p>
+                </label>
+                <input placeholder="Email Address" type="email" id="email" name="email" required>
+
+                <label for="phone">
+                    <p>Phone:</p>
+                </label>
+                <input placeholder="Contact" type="tel" id="phone" name="phone" required>
+
+                <label for="address">
+                    <p>Address:</p>
+                </label>
+                <textarea id="address" name="address" rows="3"></textarea>
+            </div>
+
+            <section>
+
+                <div id="education-section">
+                    <div class="edu">
+                        <h2>Education</h2>
+                        <label for="degree">
+                            <p>Degree:</p>
+                        </label>
+                        <input placeholder="Degree" type="text" class="degree" name="degree[]" required>
+
+                        <label for="school">
+                            <p>School:</p>
+                        </label>
+                        <input placeholder="School" type="text" class="school" name="school[]" required>
+
+                        <label for="year">
+                            <p>Year:</p>
+                        </label>
+                        <input placeholder="Year" type="text" class="year" name="year[]" required>
+                        <div class="button">
+                            <button type="button" class="remove-entry">Remove</button>
+                            <button type="button" id="add-education">Add Education</button>
+                        </div>
+                        <h2>Skills</h2>
+                        <div id="skills-section">
+                            <input placeholder="Skills" type="text" id="skills" name="skills[]">
+                        </div>
+                        <button type="button" id="add-skill">Add Skill</button>
+
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <section>
+
+                <div class="exp">
+                    <h2>Experience</h2>
+                    <div class="entry">
+                        <label for="job-title">
+                            <p>Job Title:</p>
+                        </label>
+                        <input type="text" class="job-title" name="job-title[]" required>
+
+                        <label for="company">
+                            <p>Company:</p>
+                        </label>
+                        <input type="text" class="company" name="company[]" required>
+
+                        <label for="duration">
+                            <p>Duration:</p>
+                        </label>
+                        <input type="text" class="duration" name="duration[]" required>
+
+                        <label for="responsibilities">
+                            <p>Responsibilities:</p>
+                        </label>
+                        <textarea class="responsibilities" name="responsibilities[]" rows="3"></textarea>
+                        <div>
+                            <button type="button" class="remove-entry">Remove</button>
+                            
+                            <button type="button" id="add-experience">Add Experience</button>
+                        </div>
+                        <div id="resume-preview">
+                            <h2>Live Preview</h2>
+                            <div id="preview-content"></div>
+                            <button id="download-pdf">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </form>
+
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
